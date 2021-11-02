@@ -26,8 +26,9 @@ module.exports = {
     });
   },
   pwa: {
+    name: 'enna100k',
+    assetsVersion: '202111021446',
     workboxOptions: {
-      skipWaiting: true,
       exclude: ['CNAME'],
     },
   },

@@ -25,4 +25,10 @@ module.exports = {
       return args;
     });
   },
+  pwa: {
+    workboxOptions: {
+      skipWaiting: true,
+      exclude: ['CNAME'],
+    },
+  },
 };

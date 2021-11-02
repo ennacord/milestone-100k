@@ -29,7 +29,11 @@ module.exports = {
     name: 'enna100k',
     assetsVersion: '202111021446',
     workboxOptions: {
-      exclude: ['CNAME'],
+      exclude: [
+        'CNAME',
+        /(.*).css.map/g,
+        /(.*).js.map/g,
+      ],
     },
   },
 };

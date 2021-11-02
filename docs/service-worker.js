@@ -14,16 +14,12 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.380daa239acc28b4243888403bbd9690.js"
+  "/precache-manifest.8a40e78e870d7dab7af267f0423f21a0.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "tribute-enna100k"});
 
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
+workbox.core.skipWaiting();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to

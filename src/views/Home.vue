@@ -27,9 +27,11 @@
     <!-- CONTENT -->
     <div class="content">
       <v-container class="content-grid">
+        <div class="ribbon ribbon-left"></div>
+        <div class="ribbon ribbon-right"></div>
         <v-row no-gutters>
           <v-col class="pt-16">
-            under construction
+            a
           </v-col>
         </v-row>
       </v-container>
@@ -113,9 +115,25 @@ export default {
 }
 .content {
   min-height:calc(100vh - 290px);
+  background-color:#C6CBEA;
   .content-grid {
-    background-color:#C6CBEA;
     min-height:calc(100vh - 290px);
+    background-color:#edeef8;
+    position:relative;
+    .ribbon {
+      position:absolute;
+      top:0px;
+      width:30px;
+      height:100%;
+      background-image: url('../assets/ribbon.png');
+      background-repeat: repeat-y;
+      &.ribbon-left {
+        left:-15px;
+      }
+      &.ribbon-right {
+        right:-15px;
+      }
+    }
   }
 }
 </style>

@@ -26,12 +26,36 @@
 
     <!-- CONTENT -->
     <div class="content">
-      <v-container class="content-grid">
+      <v-container class="content-grid pt-16">
         <div class="ribbon ribbon-left"></div>
         <div class="ribbon ribbon-right"></div>
+        <p class="text-center mb-2">
+          <v-btn text
+            color="red" elevation="0" class="mr-4"
+            href="https://www.youtube.com/channel/UCR6qhsLpn62WVxCBK1dkLow"
+            target="_blank">
+            <v-icon left>mdi-youtube</v-icon> YouTube
+          </v-btn>
+          <v-btn text
+            color="blue lighten-2" elevation="0" class="mr-4"
+            href="https://twitter.com/EnnaAlouette"
+            target="_blank">
+            <v-icon left>mdi-twitter</v-icon> Twitter
+          </v-btn>
+        </p>
+        <p class="text-center text-h6 mb-8">
+          Congratulations to Enna Alouette for reaching 100,000 subscribers on YouTube!
+        </p>
         <v-row no-gutters>
-          <v-col class="pt-16">
-            a
+          <v-col class="cards px-4">
+            <div v-masonry transition-duration="0.3s" item-selector=".card">
+              <div v-masonry-tile class="card" v-for="(item, ix) in cards" :key="`card-${ix}`">
+                <div class="binder"></div>
+                <div class="wings"><img src="../assets/wing.png" /></div>
+                <div class="card-name text-subtitle-2 pr-12 py-2">{{item.name}}</div>
+                <div class="card-text text-body-2 pr-4 pb-2">{{item.text}}</div>
+              </div>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -40,10 +64,38 @@
 </template>
 
 <script>
+const LOREM_IPSUM = `
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Suspendisse viverra, eros vel venenatis pharetra,
+  nisi neque porta enim, vitae tincidunt turpis metus a tellus.
+  Quisque dictum fringilla felis eu ornare.
+  Nulla non urna vitae neque pretium pharetra id eget elit.
+  Aenean blandit magna quis augue dignissim, eu tincidunt dolor iaculis.
+  Nunc scelerisque nibh et varius imperdiet.
+  Phasellus sagittis, nunc et pharetra viverra, libero purus sodales ex,
+  ut mattis enim lectus auctor felis. Donec ut lobortis leo.
+  `.split(/\s/g).filter((v) => !!v).map((v) => v.replace(/[\W_]+/g, ''));
+
 export default {
   data: () => ({
-    //
+    cards: [],
   }),
+  methods: {
+    randomName() {
+      return LOREM_IPSUM[Math.floor(Math.random() * LOREM_IPSUM.length)];
+    },
+    randomMessage() {
+      const length = 10 + Math.floor(Math.random() * (LOREM_IPSUM.length - 10));
+      const start = Math.floor(Math.random() * (LOREM_IPSUM.length - length));
+      return LOREM_IPSUM.slice(start, start + length).join(' ');
+    },
+  },
+  mounted() {
+    this.cards = [...new Array(50)].map(() => ({
+      name: this.randomName(),
+      text: this.randomMessage(),
+    }));
+  },
 };
 </script>
 
@@ -134,6 +186,59 @@ export default {
         right:-15px;
       }
     }
+    .cards {
+      .card {
+        background:#FFFFFF;
+        position:relative;
+        padding-left:15px;
+        min-height:100px;
+        margin-bottom:10px;
+        border:1px solid #858ED1;
+        .binder {
+          background:#858ED1;
+          position:absolute;
+          top:0px;
+          left:0px;
+          width:10px;
+          height:100%;
+        }
+        .wings {
+          position:absolute;
+          top:-30px; right:-20px;
+          img {
+            width:70px;
+            height:70px;
+          }
+        }
+        .card-name {
+          color:#343c75;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  width:24%;
+  margin:5px 0.5%;
+}
+
+@media only screen and (max-width: 1264px) {
+  .card {
+    width:32%;
+    margin:10px 0.5%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .card {
+    width:48%;
+    margin:10px 1%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .card {
+    width:96%;
+    margin:10px 2%;
   }
 }
 </style>

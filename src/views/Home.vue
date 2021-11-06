@@ -17,8 +17,8 @@
         <div class="mainphoto-box">
           <v-img
             :aspect-ratio="1"
-            lazy-src="https://pbs.twimg.com/profile_images/1455676707751485451/2DqZ4Q-g_400x400.jpg"
-            src="https://pbs.twimg.com/profile_images/1455676707751485451/2DqZ4Q-g_400x400.jpg"
+            lazy-src="https://pbs.twimg.com/media/FBrWlNTVgAQcJt2?format=jpg&name=medium"
+            src="https://pbs.twimg.com/media/FBrWlNTVgAQcJt2?format=jpg&name=medium"
           ></v-img>
         </div>
       </div>
@@ -194,8 +194,8 @@ export default {
     height:250px;
     position:absolute;
     z-index:1;
-    background-image:url("https://pbs.twimg.com/profile_banners/1437963160544284675/1635368193");
-    background-position: top center;
+    background-image:url("https://pbs.twimg.com/media/FDH-rZ-aUAA4sBx?format=jpg&name=large");
+    background-position: center -150px;
     background-repeat: no-repeat;
     background-size:1080px;
   }

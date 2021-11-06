@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- HEADER -->
-    <div class="header">
+    <div class="header" id="header">
       <div class="headbg mx-auto"></div>
       <div class="wings mx-auto"></div>
     </div>
@@ -17,8 +17,8 @@
         <div class="mainphoto-box">
           <v-img
             :aspect-ratio="1"
-            lazy-src="https://pbs.twimg.com/profile_images/1454531053922758662/nwTIgMxS_400x400.jpg"
-            src="https://pbs.twimg.com/profile_images/1454531053922758662/nwTIgMxS_400x400.jpg"
+            lazy-src="https://pbs.twimg.com/profile_images/1455676707751485451/2DqZ4Q-g_400x400.jpg"
+            src="https://pbs.twimg.com/profile_images/1455676707751485451/2DqZ4Q-g_400x400.jpg"
           ></v-img>
         </div>
       </div>
@@ -43,9 +43,56 @@
             <v-icon left>mdi-twitter</v-icon> Twitter
           </v-btn>
         </p>
-        <p class="text-center text-h6 mb-8">
+        <p class="text-center text-h6 mb-2">
           Congratulations to Enna Alouette for reaching 100,000 subscribers on YouTube!
         </p>
+
+        <!-- NAVIGATION -->
+        <v-row no-gutters class="cards px-4 mb-8">
+          <v-col class="text-center">
+            <v-btn text class="purple--text darken-3" @click="scrollTo('#canvas')">
+              <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
+              <span class="pl-4 text-h6">Canvas</span>
+            </v-btn>
+            <v-btn text class="purple--text darken-3" @click="scrollTo('#messages')">
+              <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
+              <span class="pl-4 text-h6">Messages</span>
+            </v-btn>
+            <v-btn text class="purple--text darken-3" @click="scrollTo('#artworks')">
+              <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
+              <span class="pl-4 text-h6">Artworks</span>
+            </v-btn>
+            <v-btn text class="purple--text darken-3" @click="scrollTo('#games')">
+              <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
+              <span class="pl-4 text-h6">Games</span>
+            </v-btn>
+          </v-col>
+        </v-row>
+
+        <!-- CANVAS -->
+        <v-row no-gutters class="mb-8" id="canvas">
+          <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
+            CANVAS
+            <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
+              TOP
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row no-gutters class="mb-8">
+          <v-col class="cards px-4">
+            canvas
+          </v-col>
+        </v-row>
+
+        <!-- MESSAGES -->
+        <v-row no-gutters class="mt-8 mb-8" id="messages">
+          <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
+            MESSAGES
+            <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
+              TOP
+            </v-btn>
+          </v-col>
+        </v-row>
         <v-row no-gutters>
           <v-col class="cards px-4">
             <div v-masonry transition-duration="0.3s" item-selector=".card">
@@ -56,6 +103,36 @@
                 <div class="card-text text-body-2 pr-4 pb-2">{{item.text}}</div>
               </div>
             </div>
+          </v-col>
+        </v-row>
+
+        <!-- ARTWORKS -->
+        <v-row no-gutters class="mt-8 mb-8" id="artworks">
+          <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
+            ARTWORKS
+            <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
+              TOP
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row no-gutters>
+          <v-col class="cards px-4">
+            artworks
+          </v-col>
+        </v-row>
+
+        <!-- GAMES -->
+        <v-row no-gutters class="mt-8 mb-8" id="games">
+          <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
+            GAMES
+            <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
+              TOP
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row no-gutters class="mb-8">
+          <v-col class="cards px-4">
+            games
           </v-col>
         </v-row>
       </v-container>
@@ -88,6 +165,13 @@ export default {
       const length = 10 + Math.floor(Math.random() * (LOREM_IPSUM.length - 10));
       const start = Math.floor(Math.random() * (LOREM_IPSUM.length - length));
       return LOREM_IPSUM.slice(start, start + length).join(' ');
+    },
+    scrollTo(target) {
+      this.$vuetify.goTo(target, {
+        duration: 1000,
+        offset: 20,
+        easing: 'easeInOutCubic',
+      });
     },
   },
   mounted() {
@@ -185,6 +269,9 @@ export default {
       &.ribbon-right {
         right:-15px;
       }
+    }
+    .navimg {
+      margin-top:-10px;
     }
     .cards {
       .card {

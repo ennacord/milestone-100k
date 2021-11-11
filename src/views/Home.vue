@@ -50,9 +50,9 @@
         <!-- NAVIGATION -->
         <v-row no-gutters class="cards px-4 mb-8">
           <v-col class="text-center">
-            <v-btn text class="purple--text darken-3" @click="scrollTo('#canvas')">
+            <v-btn text class="purple--text darken-3" @click="scrollTo('#mural')">
               <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
-              <span class="pl-4 text-h6">Canvas</span>
+              <span class="pl-4 text-h6">Mural</span>
             </v-btn>
             <v-btn text class="purple--text darken-3" @click="scrollTo('#messages')">
               <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
@@ -69,18 +69,22 @@
           </v-col>
         </v-row>
 
-        <!-- CANVAS -->
-        <v-row no-gutters class="mb-8" id="canvas">
+        <!-- MURAL -->
+        <v-row no-gutters class="mb-2" id="mural">
           <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-            CANVAS
+            MURAL
             <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
               TOP
             </v-btn>
           </v-col>
         </v-row>
         <v-row no-gutters class="mb-8">
-          <v-col class="cards px-4">
-            canvas
+          <v-col class="mural" sm="10" offset-sm="1">
+            <div class="mural-container mx-auto">
+              <inner-image-zoom
+                :src="MuralImg"
+                :zoomSrc="MuralImg" />
+            </div>
           </v-col>
         </v-row>
 
@@ -141,6 +145,8 @@
 </template>
 
 <script>
+import InnerImageZoom from 'vue-inner-image-zoom';
+
 const LOREM_IPSUM = `
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Suspendisse viverra, eros vel venenatis pharetra,
@@ -156,6 +162,7 @@ const LOREM_IPSUM = `
 export default {
   data: () => ({
     cards: [],
+    MuralImg: 'https://cdn.discordapp.com/attachments/880074875006484551/896932818096115752/magicaldraw_20211011_031915.png',
   }),
   methods: {
     randomName() {
@@ -179,6 +186,9 @@ export default {
       name: this.randomName(),
       text: this.randomMessage(),
     }));
+  },
+  components: {
+    'inner-image-zoom': InnerImageZoom,
   },
 };
 </script>
@@ -272,6 +282,11 @@ export default {
     }
     .navimg {
       margin-top:-10px;
+    }
+    .mural {
+      .mural-container {
+        max-width:calc(100vh - 80px);
+      }
     }
     .cards {
       .card {

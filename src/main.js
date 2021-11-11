@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import { VueMasonryPlugin } from 'vue-masonry';
+import 'vue-inner-image-zoom/lib/vue-inner-image-zoom.css';
 import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';

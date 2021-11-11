@@ -119,9 +119,13 @@
             </v-btn>
           </v-col>
         </v-row>
-        <v-row no-gutters>
-          <v-col class="cards px-4">
-            artworks
+        <v-row class="px-8">
+          <v-col
+            cols="12" sm="6" lg="4" xl="3"
+            v-for="(item, ix) in tweets" :key="`tweet-${ix}`">
+            <v-card  elevation="1" shaped>
+              <Tweet :id="item"></Tweet>
+            </v-card>
           </v-col>
         </v-row>
 
@@ -146,6 +150,7 @@
 
 <script>
 import InnerImageZoom from 'vue-inner-image-zoom';
+import { Tweet } from 'vue-tweet-embed';
 
 const LOREM_IPSUM = `
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -162,6 +167,16 @@ const LOREM_IPSUM = `
 export default {
   data: () => ({
     cards: [],
+    tweets: [
+      '1458385975046852612',
+      '1458386426802802690',
+      '1458410352006209543',
+      '1458381229435199489',
+      '1458075316350382086',
+      '1458102086432813056',
+      '1458061145496035332',
+      '1458431187030999044',
+    ],
     MuralImg: 'https://cdn.discordapp.com/attachments/880074875006484551/896932818096115752/magicaldraw_20211011_031915.png',
   }),
   methods: {
@@ -189,6 +204,7 @@ export default {
   },
   components: {
     'inner-image-zoom': InnerImageZoom,
+    Tweet,
   },
 };
 </script>

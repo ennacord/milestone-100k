@@ -132,15 +132,74 @@
         <!-- GAMES -->
         <v-row no-gutters class="mt-8 mb-8" id="games">
           <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-            GAMES
+            GAMES and OTHER CONTENT
+            <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
+              TOP
+            </v-btn>
+          </v-col>
+        </v-row>
+        <v-row class="mt-8 mb-8 mx-14" id="games">
+          <v-col cols="12" md="6">
+            <div class="text-h6 text-center amber lighten-4 deep-orange--text rounded-xl mb-2">
+              Flappy Enna
+            </div>
+            <div class="px-4">
+              <router-link to="/flappy-enna">
+                <v-img
+                  :lazy-src="MuralImg"
+                  :src="MuralImg"
+                  to="/flappy-enna"
+                ></v-img>
+              </router-link>
+            </div>
+          </v-col>
+          <v-col cols="12" md="6">
+            <div class="text-h6 text-center amber lighten-4 deep-orange--text rounded-xl mb-2">
+              I Could Be Choir
+            </div>
+            <div class="px-4">
+              <v-img
+                :lazy-src="MuralImg"
+                :src="MuralImg"
+              ></v-img>
+            </div>
+          </v-col>
+          <v-col cols="12" md="6">
+            <div class="text-h6 text-center amber lighten-4 deep-orange--text rounded-xl mb-2">
+              Enna Button
+            </div>
+            <div class="px-4">
+              <v-img
+                :lazy-src="MuralImg"
+                :src="MuralImg"
+              ></v-img>
+            </div>
+          </v-col>
+          <v-col cols="12" md="6">
+            <div class="text-h6 text-center amber lighten-4 deep-orange--text rounded-xl mb-2">
+              Video Tribute
+            </div>
+            <div class="px-4">
+              <v-img
+                :lazy-src="MuralImg"
+                :src="MuralImg"
+              ></v-img>
+            </div>
+          </v-col>
+        </v-row>
+
+        <!-- CREDITS -->
+        <v-row no-gutters class="mt-8 mb-8" id="games">
+          <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
+            CREDITS
             <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
               TOP
             </v-btn>
           </v-col>
         </v-row>
         <v-row no-gutters class="mb-8">
-          <v-col class="cards px-4">
-            games
+          <v-col class="cards px-16">
+            credits
           </v-col>
         </v-row>
       </v-container>

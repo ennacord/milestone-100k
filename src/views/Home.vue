@@ -151,6 +151,7 @@
 <script>
 import InnerImageZoom from 'vue-inner-image-zoom';
 import { Tweet } from 'vue-tweet-embed';
+import MuralImg from '@/assets/sample1.png';
 
 const LOREM_IPSUM = `
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -177,7 +178,7 @@ export default {
       '1458061145496035332',
       '1458431187030999044',
     ],
-    MuralImg: 'https://cdn.discordapp.com/attachments/880074875006484551/896932818096115752/magicaldraw_20211011_031915.png',
+    MuralImg,
   }),
   methods: {
     randomName() {
@@ -301,7 +302,7 @@ export default {
     }
     .mural {
       .mural-container {
-        max-width:calc(100vh - 80px);
+        // max-width:calc(100vh - 80px);
       }
     }
     .cards {

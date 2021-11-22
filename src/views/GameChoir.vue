@@ -26,8 +26,16 @@
 
     <!-- CONTENT -->
     <div class="content">
-      <v-container class="content-grid pt-16 pb-16">
-        <div id="game"></div>
+      <v-container class="content-grid pt-2 pb-16">
+        <v-btn text class="purple--text darken-3" to="/">
+          <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
+          <span class="pl-4 text-h6">Back to Home</span>
+        </v-btn>
+        <p class="text-h4 text-center mt-8 mb-2">Choir of Heaven</p>
+        <p class="text-h6 text-center mb-4">by jetrico, Deemo Harlos, mattvent</p>
+        <div id="game-container">
+          <div id="game"></div>
+        </div>
       </v-container>
     </div>
   </div>
@@ -346,5 +354,8 @@ export default {
     position:relative;
   }
 }
+#game-container {
+  max-width:854px;
+  margin:0px auto;
+}
 </style>
-scene.sound.play(key);

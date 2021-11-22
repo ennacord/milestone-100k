@@ -1,206 +1,184 @@
 <template>
-  <div>
-    <!-- HEADER -->
-    <div class="header" id="header">
-      <div class="headbg mx-auto"></div>
-      <div class="wings mx-auto"></div>
-    </div>
+  <div class="content">
+    <v-container class="content-grid pt-8">
+      <div class="ribbon ribbon-left"></div>
+      <div class="ribbon ribbon-right"></div>
+      <p class="text-center mb-2">
+        <v-btn text
+          color="red" elevation="0" class="mr-4"
+          href="https://www.youtube.com/channel/UCR6qhsLpn62WVxCBK1dkLow"
+          target="_blank">
+          <v-icon left>mdi-youtube</v-icon> YouTube
+        </v-btn>
+        <v-btn text
+          color="blue lighten-2" elevation="0" class="mr-4"
+          href="https://twitter.com/EnnaAlouette"
+          target="_blank">
+          <v-icon left>mdi-twitter</v-icon> Twitter
+        </v-btn>
+      </p>
+      <p class="text-center text-h6 mb-2">
+        Congratulations to Enna Alouette for reaching 100,000 subscribers on YouTube!
+      </p>
 
-    <!-- BAR -->
-    <div class="bar text-center">
-      <div class="mainphoto">
-        <div class="mainphoto-box">
-          <v-img
-            :aspect-ratio="1"
-            lazy-src="../assets/logo.png"
-            src="../assets/logo.png"
-          ></v-img>
-        </div>
-      </div>
-    </div>
-
-    <!-- CONTENT -->
-    <div class="content">
-      <v-container class="content-grid pt-8">
-        <div class="ribbon ribbon-left"></div>
-        <div class="ribbon ribbon-right"></div>
-        <p class="text-center mb-2">
-          <v-btn text
-            color="red" elevation="0" class="mr-4"
-            href="https://www.youtube.com/channel/UCR6qhsLpn62WVxCBK1dkLow"
-            target="_blank">
-            <v-icon left>mdi-youtube</v-icon> YouTube
+      <!-- NAVIGATION -->
+      <v-row no-gutters class="cards px-4 mb-8">
+        <v-col class="text-center">
+          <v-btn text class="purple--text darken-3" @click="scrollTo('#mural')">
+            <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
+            <span class="pl-4 text-h6">Mural</span>
           </v-btn>
-          <v-btn text
-            color="blue lighten-2" elevation="0" class="mr-4"
-            href="https://twitter.com/EnnaAlouette"
-            target="_blank">
-            <v-icon left>mdi-twitter</v-icon> Twitter
+          <v-btn text class="purple--text darken-3" @click="scrollTo('#messages')">
+            <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
+            <span class="pl-4 text-h6">Messages</span>
           </v-btn>
-        </p>
-        <p class="text-center text-h6 mb-2">
-          Congratulations to Enna Alouette for reaching 100,000 subscribers on YouTube!
-        </p>
+          <v-btn text class="purple--text darken-3" @click="scrollTo('#games')">
+            <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
+            <span class="pl-4 text-h6">Games</span>
+          </v-btn>
+          <v-btn text class="purple--text darken-3" @click="scrollTo('#artworks')">
+            <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
+            <span class="pl-4 text-h6">Artworks</span>
+          </v-btn>
+        </v-col>
+      </v-row>
 
-        <!-- NAVIGATION -->
-        <v-row no-gutters class="cards px-4 mb-8">
-          <v-col class="text-center">
-            <v-btn text class="purple--text darken-3" @click="scrollTo('#mural')">
-              <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
-              <span class="pl-4 text-h6">Mural</span>
-            </v-btn>
-            <v-btn text class="purple--text darken-3" @click="scrollTo('#messages')">
-              <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
-              <span class="pl-4 text-h6">Messages</span>
-            </v-btn>
-            <v-btn text class="purple--text darken-3" @click="scrollTo('#artworks')">
-              <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
-              <span class="pl-4 text-h6">Artworks</span>
-            </v-btn>
-            <v-btn text class="purple--text darken-3" @click="scrollTo('#games')">
-              <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
-              <span class="pl-4 text-h6">Games</span>
-            </v-btn>
-          </v-col>
-        </v-row>
+      <!-- MURAL -->
+      <v-row no-gutters class="mb-2" id="mural">
+        <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
+          MURAL
+          <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
+            TOP
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row no-gutters class="mb-8">
+        <v-col class="mural" sm="10" offset-sm="1">
+          <div class="mural-container mx-auto">
+            <inner-image-zoom
+              :src="MuralImg"
+              :zoomSrc="MuralImg" />
+          </div>
+        </v-col>
+      </v-row>
 
-        <!-- MURAL -->
-        <v-row no-gutters class="mb-2" id="mural">
-          <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-            MURAL
-            <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
-              TOP
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-row no-gutters class="mb-8">
-          <v-col class="mural" sm="10" offset-sm="1">
-            <div class="mural-container mx-auto">
-              <inner-image-zoom
-                :src="MuralImg"
-                :zoomSrc="MuralImg" />
+      <!-- MESSAGES -->
+      <v-row no-gutters class="mt-8 mb-8" id="messages">
+        <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
+          MESSAGES
+          <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
+            TOP
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row no-gutters>
+        <v-col class="cards px-4">
+          <div v-masonry transition-duration="0.3s" item-selector=".card">
+            <div v-masonry-tile class="card" v-for="(item, ix) in cards" :key="`card-${ix}`">
+              <div class="binder"></div>
+              <div class="wings"><img src="../assets/wing.png" /></div>
+              <div class="card-name text-subtitle-2 pr-12 py-2">{{item.name}}</div>
+              <div class="card-text text-body-2 pr-4 pb-2">{{item.text}}</div>
             </div>
-          </v-col>
-        </v-row>
+          </div>
+        </v-col>
+      </v-row>
 
-        <!-- MESSAGES -->
-        <v-row no-gutters class="mt-8 mb-8" id="messages">
-          <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-            MESSAGES
-            <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
-              TOP
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-row no-gutters>
-          <v-col class="cards px-4">
-            <div v-masonry transition-duration="0.3s" item-selector=".card">
-              <div v-masonry-tile class="card" v-for="(item, ix) in cards" :key="`card-${ix}`">
-                <div class="binder"></div>
-                <div class="wings"><img src="../assets/wing.png" /></div>
-                <div class="card-name text-subtitle-2 pr-12 py-2">{{item.name}}</div>
-                <div class="card-text text-body-2 pr-4 pb-2">{{item.text}}</div>
-              </div>
-            </div>
-          </v-col>
-        </v-row>
-
-        <!-- ARTWORKS -->
-        <v-row no-gutters class="mt-8 mb-8" id="artworks">
-          <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-            ARTWORKS
-            <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
-              TOP
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-row class="px-8">
-          <v-col
-            cols="12" sm="6" lg="4" xl="3"
-            v-for="(item, ix) in tweets" :key="`tweet-${ix}`">
-            <v-card  elevation="1" shaped>
-              <Tweet :id="item"></Tweet>
-            </v-card>
-          </v-col>
-        </v-row>
-
-        <!-- GAMES -->
-        <v-row no-gutters class="mt-8 mb-4" id="games">
-          <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-            GAMES and OTHER CONTENT
-            <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
-              TOP
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-row class="mb-8 mx-14" id="games">
-          <v-col cols="12" md="6">
-            <router-link to="/flappy-enna" class="text-decoration-none">
-              <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
-                Flappy Enna
-              </div>
-              <div class="px-4">
-                <v-img
-                  :lazy-src="ThumbFlappy"
-                  :src="ThumbFlappy"
-                  to="/flappy-enna"
-                ></v-img>
-              </div>
-            </router-link>
-          </v-col>
-          <v-col cols="12" md="6">
-            <router-link to="/choir" class="text-decoration-none">
-              <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
-                Choir of Heaven
-              </div>
-              <div class="px-4">
-                <v-img
-                  :lazy-src="ThumbChoir"
-                  :src="ThumbChoir"
-                ></v-img>
-              </div>
-            </router-link>
-          </v-col>
-          <v-col cols="12" md="6">
+      <!-- GAMES -->
+      <v-row no-gutters class="mt-8 mb-4" id="games">
+        <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
+          GAMES and OTHER CONTENT
+          <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
+            TOP
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row class="mb-8 mx-14" id="games">
+        <v-col cols="12" md="6">
+          <router-link to="/flappy-enna" class="text-decoration-none">
             <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
-              Enna Button
+              Flappy Enna
             </div>
             <div class="px-4">
               <v-img
-                :lazy-src="MuralImg"
-                :src="MuralImg"
+                :lazy-src="ThumbFlappy"
+                :src="ThumbFlappy"
+                to="/flappy-enna"
               ></v-img>
             </div>
-          </v-col>
-          <v-col cols="12" md="6">
+          </router-link>
+        </v-col>
+        <v-col cols="12" md="6">
+          <router-link to="/choir" class="text-decoration-none">
             <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
-              Video Tribute
+              Choir of Heaven
             </div>
             <div class="px-4">
               <v-img
-                :lazy-src="MuralImg"
-                :src="MuralImg"
+                :lazy-src="ThumbChoir"
+                :src="ThumbChoir"
               ></v-img>
             </div>
-          </v-col>
-        </v-row>
+          </router-link>
+        </v-col>
+        <v-col cols="12" md="6">
+          <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
+            Enna Button
+          </div>
+          <div class="px-4">
+            <v-img
+              :lazy-src="MuralImg"
+              :src="MuralImg"
+            ></v-img>
+          </div>
+        </v-col>
+        <v-col cols="12" md="6">
+          <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
+            Video Tribute
+          </div>
+          <div class="px-4">
+            <v-img
+              :lazy-src="MuralImg"
+              :src="MuralImg"
+            ></v-img>
+          </div>
+        </v-col>
+      </v-row>
 
-        <!-- CREDITS -->
-        <v-row no-gutters class="mt-8 mb-8" id="games">
-          <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-            CREDITS
-            <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
-              TOP
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-row no-gutters class="mb-8">
-          <v-col class="cards px-16">
-            credits
-          </v-col>
-        </v-row>
-      </v-container>
-    </div>
+      <!-- ARTWORKS -->
+      <v-row no-gutters class="mt-8 mb-8" id="artworks">
+        <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
+          ARTWORKS
+          <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
+            TOP
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row class="px-8">
+        <v-col
+          cols="12" sm="6" lg="4" xl="3"
+          v-for="(item, ix) in tweets" :key="`tweet-${ix}`">
+          <v-card  elevation="1" shaped>
+            <Tweet :id="item"></Tweet>
+          </v-card>
+        </v-col>
+      </v-row>
+
+      <!-- CREDITS -->
+      <v-row no-gutters class="mt-8 mb-8" id="games">
+        <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
+          CREDITS
+          <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
+            TOP
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row no-gutters class="mb-8">
+        <v-col class="cards px-16">
+          credits
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -271,58 +249,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header {
-  width:100%;
-  height:250px;
-  background:linear-gradient(to right, #93bdf7 40%, #b294ed 60%);
-  position:relative;
-  .headbg {
-    width:100%;
-    height:250px;
-    position:absolute;
-    z-index:1;
-    background-image:url("../assets/headermatt-250.png");
-    background-position: center 0px;
-    background-repeat: no-repeat;
-    background-size:1080px;
-  }
-  .wings {
-    width:100%;
-    height:250px;
-    position:absolute;
-    z-index:2;
-    background-image:url("../assets/header250.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-  }
-}
-.bar {
-  width:100%;
-  height:40px;
-  position:relative;
-  z-index:3;
-  background-color:#858ED1;
-  background-image:url("../assets/flower.png");
-  background-position: center left;
-  background-repeat: repeat-x;
-  background-size:46px 18px;
-  .mainphoto {
-    width:1px;
-    height:1px;
-    display:inline-block;
-    position:absolute;
-    margin:0px auto;
-    .mainphoto-box {
-      width:256px;
-      height:256px;
-      margin-top:-190px;
-      margin-left:-128px;
-      position:relative;
-      border-radius:50%;
-      overflow:hidden;
-    }
-  }
-}
 .content {
   min-height:calc(100vh - 290px);
   background-color:#C6CBEA;

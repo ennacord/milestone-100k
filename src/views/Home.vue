@@ -8,17 +8,12 @@
 
     <!-- BAR -->
     <div class="bar text-center">
-      <div class="photoframe">
-        <div class="photoframe-box">
-          <img src="../assets/mainphoto.png" />
-        </div>
-      </div>
       <div class="mainphoto">
         <div class="mainphoto-box">
           <v-img
             :aspect-ratio="1"
-            lazy-src="https://pbs.twimg.com/media/FBrWlNTVgAQcJt2?format=jpg&name=medium"
-            src="https://pbs.twimg.com/media/FBrWlNTVgAQcJt2?format=jpg&name=medium"
+            lazy-src="../assets/logo.png"
+            src="../assets/logo.png"
           ></v-img>
         </div>
       </div>
@@ -26,7 +21,7 @@
 
     <!-- CONTENT -->
     <div class="content">
-      <v-container class="content-grid pt-16">
+      <v-container class="content-grid pt-8">
         <div class="ribbon ribbon-left"></div>
         <div class="ribbon ribbon-right"></div>
         <p class="text-center mb-2">
@@ -141,13 +136,13 @@
         <v-row class="mb-8 mx-14" id="games">
           <v-col cols="12" md="6">
             <router-link to="/flappy-enna" class="text-decoration-none">
-              <div class="text-h6 text-center amber lighten-4 deep-orange--text rounded-xl mb-2">
+              <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
                 Flappy Enna
               </div>
               <div class="px-4">
                 <v-img
-                  :lazy-src="MuralImg"
-                  :src="MuralImg"
+                  :lazy-src="ThumbFlappy"
+                  :src="ThumbFlappy"
                   to="/flappy-enna"
                 ></v-img>
               </div>
@@ -155,19 +150,19 @@
           </v-col>
           <v-col cols="12" md="6">
             <router-link to="/choir" class="text-decoration-none">
-              <div class="text-h6 text-center amber lighten-4 deep-orange--text rounded-xl mb-2">
-                I Could Be Choir
+              <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
+                Choir of Heaven
               </div>
               <div class="px-4">
                 <v-img
-                  :lazy-src="MuralImg"
-                  :src="MuralImg"
+                  :lazy-src="ThumbChoir"
+                  :src="ThumbChoir"
                 ></v-img>
               </div>
             </router-link>
           </v-col>
           <v-col cols="12" md="6">
-            <div class="text-h6 text-center amber lighten-4 deep-orange--text rounded-xl mb-2">
+            <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
               Enna Button
             </div>
             <div class="px-4">
@@ -178,7 +173,7 @@
             </div>
           </v-col>
           <v-col cols="12" md="6">
-            <div class="text-h6 text-center amber lighten-4 deep-orange--text rounded-xl mb-2">
+            <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
               Video Tribute
             </div>
             <div class="px-4">
@@ -212,7 +207,9 @@
 <script>
 import InnerImageZoom from 'vue-inner-image-zoom';
 import { Tweet } from 'vue-tweet-embed';
-import MuralImg from '@/assets/sample1.png';
+import MuralImg from '../assets/sample1.png';
+import ThumbFlappy from '../assets/thumb-flappy.png';
+import ThumbChoir from '../assets/thumb-choir.png';
 
 const LOREM_IPSUM = `
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -240,6 +237,8 @@ export default {
       '1458431187030999044',
     ],
     MuralImg,
+    ThumbFlappy,
+    ThumbChoir,
   }),
   methods: {
     randomName() {
@@ -282,8 +281,8 @@ export default {
     height:250px;
     position:absolute;
     z-index:1;
-    background-image:url("https://pbs.twimg.com/media/FDH-rZ-aUAA4sBx?format=jpg&name=large");
-    background-position: center -150px;
+    background-image:url("../assets/headermatt-250.png");
+    background-position: center 0px;
     background-repeat: no-repeat;
     background-size:1080px;
   }
@@ -307,18 +306,6 @@ export default {
   background-position: center left;
   background-repeat: repeat-x;
   background-size:46px 18px;
-  .photoframe {
-    width:1px;
-    height:1px;
-    display:inline-block;
-    position:absolute;
-    margin:0px auto;
-    .photoframe-box {
-      margin-top:-300px;
-      margin-left:-300px;
-      position:relative;
-    }
-  }
   .mainphoto {
     width:1px;
     height:1px;
@@ -326,16 +313,15 @@ export default {
     position:absolute;
     margin:0px auto;
     .mainphoto-box {
-      width:160px;
-      height:160px;
-      margin-top:-80px;
-      margin-left:-80px;
+      width:256px;
+      height:256px;
+      margin-top:-190px;
+      margin-left:-128px;
       position:relative;
       border-radius:50%;
       overflow:hidden;
     }
   }
-
 }
 .content {
   min-height:calc(100vh - 290px);

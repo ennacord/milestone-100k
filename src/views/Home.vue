@@ -95,7 +95,7 @@
       </v-row>
       <v-row class="mb-8 mx-14" id="games">
         <v-col cols="12" md="6">
-          <router-link to="/flappy-enna" class="text-decoration-none">
+          <router-link to="/flappy-enna" class="text-decoration-none" target="_blank">
             <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
               Flappy Enna
             </div>
@@ -109,7 +109,7 @@
           </router-link>
         </v-col>
         <v-col cols="12" md="6">
-          <router-link to="/choir" class="text-decoration-none">
+          <router-link to="/choir" class="text-decoration-none" target="_blank">
             <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
               Choir of Heaven
             </div>

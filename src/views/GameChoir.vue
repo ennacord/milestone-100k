@@ -1,10 +1,10 @@
 <template>
-  <div class="content">
+  <div class="content" v-if="$route.path === '/choir'">
     <v-container class="content-grid pt-2 pb-16">
-      <v-btn text class="purple--text darken-3" to="/">
+      <!-- <v-btn text class="purple--text darken-3" to="/">
         <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
         <span class="pl-4 text-h6">Back to Home</span>
-      </v-btn>
+      </v-btn> -->
       <p class="text-h4 text-center mt-8 mb-2" id="game-title">Choir of Heaven</p>
       <p class="text-h6 text-center mb-4">by jetrico, Deemo Harlos, mattvent</p>
       <div id="game-container">
@@ -208,10 +208,12 @@ export default {
       },
     });
 
-    this.$vuetify.goTo('#game-title', {
-      duration: 1000,
-      offset: 20,
-      easing: 'easeInOutCubic',
+    this.$nextTick(() => {
+      this.$vuetify.goTo('#game-title', {
+        duration: 1000,
+        offset: 20,
+        easing: 'easeInOutCubic',
+      });
     });
   },
 };
@@ -229,6 +231,7 @@ export default {
 }
 #game-container {
   max-width:854px;
+  min-height:480px;
   margin:0px auto;
 }
 </style>

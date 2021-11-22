@@ -1,0 +1,93 @@
+{
+	"frames": {
+		"random": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 139,
+				"h": 44
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 139,
+				"h": 44
+			},
+			"sourceSize": {
+				"w": 139,
+				"h": 44
+			}
+		},
+		"auto": {
+			"frame": {
+				"x": 142,
+				"y": 1,
+				"w": 139,
+				"h": 44
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 139,
+				"h": 44
+			},
+			"sourceSize": {
+				"w": 139,
+				"h": 44
+			}
+		},
+		"manual": {
+			"frame": {
+				"x": 283,
+				"y": 1,
+				"w": 139,
+				"h": 44
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 139,
+				"h": 44
+			},
+			"sourceSize": {
+				"w": 139,
+				"h": 44
+			}
+		},
+		"background": {
+			"frame": {
+				"x": 1,
+				"y": 47,
+				"w": 854,
+				"h": 480
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 854,
+				"h": 480
+			},
+			"sourceSize": {
+				"w": 854,
+				"h": 480
+			}
+		}
+	},
+	"meta": {
+		"image": "choir.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 856,
+			"h": 528
+		},
+		"scale": "1"
+	}
+}

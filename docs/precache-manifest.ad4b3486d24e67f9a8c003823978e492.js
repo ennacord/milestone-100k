@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "41c3ee21c2106df2c25a",
-    "url": "/css/app.cb72137f.css"
+    "revision": "a5bbbac82446921792ef",
+    "url": "/css/app.834fda5d.css"
   },
   {
     "revision": "f8eb28f7739fc87c68e3",
     "url": "/css/chunk-vendors.d9688eaf.css"
   },
   {
-    "revision": "1ba2ae710d927f13d483fd5d1e548c9b",
+    "revision": "f93e7356b3e6d4c4649cd27c3b4e62f2",
     "url": "/favicon.ico"
   },
   {
-    "revision": "c170ed428d34e9c44692ad9019ebc797",
-    "url": "/img/choir.c170ed42.png"
+    "revision": "cc5dd763cd4276dd0e6993944dcd8499",
+    "url": "/img/choir.cc5dd763.png"
   },
   {
     "revision": "752378f740b80216dbfabce385cfb291",
@@ -24,64 +24,72 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/header250.25e66270.png"
   },
   {
-    "revision": "f130a0b70e386170cf6f011c0ca8c4f4",
+    "revision": "b9c9229d03d27461c63647a49a3d9905",
+    "url": "/img/headermatt-250.b9c9229d.png"
+  },
+  {
+    "revision": "9363b143d475a2c5b0b03d114499c6da",
     "url": "/img/icons/android-chrome-192x192.png"
   },
   {
-    "revision": "0ff1bc4d14e5c9abcacba7c600d97814",
+    "revision": "a5160bd1cb6e8155fd4836659a3a45cb",
     "url": "/img/icons/android-chrome-512x512.png"
   },
   {
-    "revision": "845a39478d0e2d4d5d32a092de2de250",
+    "revision": "9363b143d475a2c5b0b03d114499c6da",
     "url": "/img/icons/android-chrome-maskable-192x192.png"
   },
   {
-    "revision": "2695f5feb66cdb0c6f09d0e415824cf9",
+    "revision": "a5160bd1cb6e8155fd4836659a3a45cb",
     "url": "/img/icons/android-chrome-maskable-512x512.png"
   },
   {
-    "revision": "936d6e411cabd71f0e627011c3f18fe2",
+    "revision": "ce540a10853585318711d929f2401256",
     "url": "/img/icons/apple-touch-icon-120x120.png"
   },
   {
-    "revision": "1a034e64d80905128113e5272a5ab95e",
+    "revision": "a88e739a2aad447674ba16d10a3c5e7c",
     "url": "/img/icons/apple-touch-icon-152x152.png"
   },
   {
-    "revision": "c43cd371a49ee4ca17ab3a60e72bdd51",
+    "revision": "7318736e30759a1e61612f5b21ea7718",
     "url": "/img/icons/apple-touch-icon-180x180.png"
   },
   {
-    "revision": "9a2b5c0f19de617685b7b5b42464e7db",
+    "revision": "3ffabd1da2a3b69d32a6ee9c2b703ee9",
     "url": "/img/icons/apple-touch-icon-60x60.png"
   },
   {
-    "revision": "af28d69d59284dd202aa55e57227b11b",
+    "revision": "b8167bcc9933c10c3daffacd5effd9a8",
     "url": "/img/icons/apple-touch-icon-76x76.png"
   },
   {
-    "revision": "66830ea6be8e7e94fb55df9f7b778f2e",
+    "revision": "7318736e30759a1e61612f5b21ea7718",
     "url": "/img/icons/apple-touch-icon.png"
   },
   {
-    "revision": "4bb1a55479d61843b89a2fdafa7849b3",
+    "revision": "236b9915cddce8b3d1268341b4ac1d91",
     "url": "/img/icons/favicon-16x16.png"
   },
   {
-    "revision": "98b614336d9a12cb3f7bedb001da6fca",
+    "revision": "5163ff6645f93ef8caf66cebb6a39a9c",
     "url": "/img/icons/favicon-32x32.png"
   },
   {
-    "revision": "b89032a4a5a1879f30ba05a13947f26f",
+    "revision": "5331abf1b8dbfdf83514d533fafbf5f3",
     "url": "/img/icons/msapplication-icon-144x144.png"
   },
   {
-    "revision": "058a3335d15a3eb84e7ae3707ba09620",
+    "revision": "5b84e79fbb40328fdd60bad0e36ad124",
     "url": "/img/icons/mstile-150x150.png"
   },
   {
-    "revision": "4e857233cbd3bb2d2db4f78bed62a52f",
+    "revision": "ad19f9d92cd126d580f974996bff6543",
     "url": "/img/icons/safari-pinned-tab.svg"
+  },
+  {
+    "revision": "77ea434173c779600f6ef33709cf1ecd",
+    "url": "/img/logo.77ea4341.png"
   },
   {
     "revision": "efa54c8aba2c0e2fa6941efe57295926",
@@ -92,16 +100,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/sample1.a496fda5.png"
   },
   {
+    "revision": "dfd09707da285c406d2339c2c1f2fc2f",
+    "url": "/img/thumb-choir.dfd09707.png"
+  },
+  {
+    "revision": "cf34c6c7acde1655aa71999bcb224b6a",
+    "url": "/img/thumb-flappy.cf34c6c7.png"
+  },
+  {
     "revision": "c736222f0d4f14daa8fc1c2842e389d2",
     "url": "/img/wing.c736222f.png"
   },
   {
-    "revision": "f7fb265c018f0caf136eaeece5db5533",
+    "revision": "b08ceab3eabb5ccd6f638ab0101b9035",
     "url": "/index.html"
   },
   {
-    "revision": "41c3ee21c2106df2c25a",
-    "url": "/js/app.9dbdef2d.js"
+    "revision": "a5bbbac82446921792ef",
+    "url": "/js/app.cd004504.js"
   },
   {
     "revision": "f8eb28f7739fc87c68e3",

@@ -16,18 +16,18 @@ module.exports = {
         'og:title': 'Enna Alouette 100k Subsribers Tribute',
         'og:type': 'website',
         'og:description': 'The community celebrates Enna Alouette reaching 100,000 YouTube subscribers.',
-        // 'og:image': '',
+        'og:image': 'https://enna100k.fromyour.fans/enna100k.png',
         'twitter:card': 'summary_large_image',
         'twitter:title': 'Enna Alouette 100k Subsribers Tribute',
         'twitter:description': 'The community celebrates Enna Alouette reaching 100,000 YouTube subscribers.',
-        // 'twitter:image': '',
+        'twitter:image': 'https://enna100k.fromyour.fans/enna100k.png',
       };
       return args;
     });
   },
   pwa: {
     name: 'enna100k',
-    assetsVersion: '202111021446',
+    assetsVersion: '2021_11_22_00_41',
     workboxOptions: {
       exclude: [
         'CNAME',

@@ -8,7 +8,7 @@
       <p class="text-h4 text-center mt-8 mb-2" id="game-title">Flappy Enna</p>
       <p class="text-h6 text-center mb-4">by wikidude</p>
       <iframe
-        src="https://itch.io/embed-upload/4793666?color=858ED1"
+        src="https://itch.io/embed-upload/4820860?color=858ED1"
         allowfullscreen=""
         width="100%" height="750"
         frameborder="0">

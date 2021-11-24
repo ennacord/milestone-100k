@@ -16,11 +16,11 @@ module.exports = {
         'og:title': 'Enna Alouette 100k Subsribers Tribute',
         'og:type': 'website',
         'og:description': 'The community celebrates Enna Alouette reaching 100,000 YouTube subscribers.',
-        'og:image': 'https://enna100k.fromyour.fans/enna100k.png',
+        'og:image': 'https://100k.ennaalouette.com/enna100k.png',
         'twitter:card': 'summary_large_image',
         'twitter:title': 'Enna Alouette 100k Subsribers Tribute',
         'twitter:description': 'The community celebrates Enna Alouette reaching 100,000 YouTube subscribers.',
-        'twitter:image': 'https://enna100k.fromyour.fans/enna100k.png',
+        'twitter:image': 'https://100k.ennaalouette.com/enna100k.png',
       };
       return args;
     });

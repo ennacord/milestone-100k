@@ -3,7 +3,7 @@
     <v-container class="content-grid pt-8">
       <div class="ribbon ribbon-left"></div>
       <div class="ribbon ribbon-right"></div>
-      <p class="text-center mb-2">
+      <!-- <p class="text-center mb-2">
         <v-btn text
           color="red" elevation="0" class="mr-4"
           href="https://www.youtube.com/channel/UCR6qhsLpn62WVxCBK1dkLow"
@@ -16,9 +16,14 @@
           target="_blank">
           <v-icon left>mdi-twitter</v-icon> Twitter
         </v-btn>
-      </p>
-      <p class="text-center text-h6 mb-2">
-        Congratulations to Enna Alouette for reaching 100,000 subscribers on YouTube!
+      </p> -->
+      <p class="text-center text-h5 mt-2 mb-4">
+        Congratulations to
+        <a href="https://www.youtube.com/channel/UCR6qhsLpn62WVxCBK1dkLow"
+          target="_blank"
+          class="font-weight-bold blue--text text-decoration-none">
+          Enna Alouette</a>
+        for reaching 100,000 subscribers on YouTube!
       </p>
 
       <!-- NAVIGATION -->
@@ -43,10 +48,35 @@
         </v-col>
       </v-row>
 
+      <!-- NOTICES -->
+      <v-row no-gutters class="cards px-16 mb-4">
+        <v-col class="text-center">
+          <v-alert border="bottom" color="pink darken-1" class="text-h6 px-16" dark>
+            <p>
+              It's not too late! You can still celebrate Enna's milestone with everyone!<br />
+              <a href="https://forms.gle/aVxT2r8NxZMBdmFr6" target="_blank"
+                class="text-h5 lime--text lighten-5 text-decoration-none">
+                Add a message
+              </a>
+              and
+              <a href="https://aggie.io/9uoq9qnmty" target="_blank"
+                class="text-h5 lime--text lighten-5 text-decoration-none">
+                Doodle on the Wall
+              </a>!
+            </p>
+            <p>
+              To those who are drawing her a fanart as congratulations on 100k,
+              please submit a message, then specify your twitter handle to get whitelisted.
+              You'll also need to add the hashtag #enna100k to be included in the gallery section.
+            </p>
+          </v-alert>
+        </v-col>
+      </v-row>
+
       <!-- MURAL -->
       <v-row no-gutters class="mb-2" id="mural">
         <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-          MURAL
+          WALL OF THE SONGBIRD
           <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
             TOP
           </v-btn>
@@ -65,7 +95,7 @@
       <!-- MESSAGES -->
       <v-row no-gutters class="mt-8 mb-8" id="messages">
         <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-          MESSAGES
+          MESSAGES FOR THE SONGBIRD
           <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
             TOP
           </v-btn>
@@ -77,8 +107,8 @@
             <div v-masonry-tile class="card" v-for="(item, ix) in cards" :key="`card-${ix}`">
               <div class="binder"></div>
               <div class="wings"><img src="../assets/wing.png" /></div>
-              <div class="card-name text-subtitle-2 pr-12 py-2">{{item.name}}</div>
-              <div class="card-text text-body-2 pr-4 pb-2">{{item.text}}</div>
+              <div class="card-name text-h6 pr-12 py-2">{{item.name}}</div>
+              <div class="card-text text-h6 pr-4 pb-2">{{item.message}}</div>
             </div>
           </div>
         </v-col>
@@ -97,7 +127,7 @@
         <v-col cols="12" md="6">
           <router-link to="/flappy-enna" class="text-decoration-none" target="_blank">
             <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
-              Flappy Enna
+              Flight of this Songbird
             </div>
             <div class="px-4">
               <v-img
@@ -121,7 +151,7 @@
             </div>
           </router-link>
         </v-col>
-        <v-col cols="12" md="6">
+        <!-- <v-col cols="12" md="6">
           <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
             Enna Button
           </div>
@@ -131,8 +161,8 @@
               :src="MuralImg"
             ></v-img>
           </div>
-        </v-col>
-        <v-col cols="12" md="6">
+        </v-col> -->
+        <!-- <v-col cols="12" md="6">
           <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
             Video Tribute
           </div>
@@ -142,7 +172,7 @@
               :src="MuralImg"
             ></v-img>
           </div>
-        </v-col>
+        </v-col> -->
       </v-row>
 
       <!-- ARTWORKS -->
@@ -165,7 +195,7 @@
       </v-row>
 
       <!-- CREDITS -->
-      <v-row no-gutters class="mt-8 mb-8" id="games">
+      <!-- <v-row no-gutters class="mt-8 mb-8" id="games">
         <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
           CREDITS
           <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
@@ -177,56 +207,29 @@
         <v-col class="cards px-16">
           credits
         </v-col>
-      </v-row>
+      </v-row> -->
     </v-container>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
 import InnerImageZoom from 'vue-inner-image-zoom';
 import { Tweet } from 'vue-tweet-embed';
-import MuralImg from '../assets/sample1.png';
+import MuralImg from '../assets/mural.jpg';
 import ThumbFlappy from '../assets/thumb-flappy.png';
 import ThumbChoir from '../assets/thumb-choir.png';
 
-const LOREM_IPSUM = `
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Suspendisse viverra, eros vel venenatis pharetra,
-  nisi neque porta enim, vitae tincidunt turpis metus a tellus.
-  Quisque dictum fringilla felis eu ornare.
-  Nulla non urna vitae neque pretium pharetra id eget elit.
-  Aenean blandit magna quis augue dignissim, eu tincidunt dolor iaculis.
-  Nunc scelerisque nibh et varius imperdiet.
-  Phasellus sagittis, nunc et pharetra viverra, libero purus sodales ex,
-  ut mattis enim lectus auctor felis. Donec ut lobortis leo.
-  `.split(/\s/g).filter((v) => !!v).map((v) => v.replace(/[\W_]+/g, ''));
-
 export default {
   data: () => ({
+    source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/enna100k.json',
     cards: [],
-    tweets: [
-      '1458385975046852612',
-      '1458386426802802690',
-      '1458410352006209543',
-      '1458381229435199489',
-      '1458075316350382086',
-      '1458102086432813056',
-      '1458061145496035332',
-      '1458431187030999044',
-    ],
+    tweets: [],
     MuralImg,
     ThumbFlappy,
     ThumbChoir,
   }),
   methods: {
-    randomName() {
-      return LOREM_IPSUM[Math.floor(Math.random() * LOREM_IPSUM.length)];
-    },
-    randomMessage() {
-      const length = 10 + Math.floor(Math.random() * (LOREM_IPSUM.length - 10));
-      const start = Math.floor(Math.random() * (LOREM_IPSUM.length - length));
-      return LOREM_IPSUM.slice(start, start + length).join(' ');
-    },
     scrollTo(target) {
       this.$vuetify.goTo(target, {
         duration: 1000,
@@ -236,10 +239,16 @@ export default {
     },
   },
   mounted() {
-    this.cards = [...new Array(50)].map(() => ({
-      name: this.randomName(),
-      text: this.randomMessage(),
-    }));
+    // Load data
+    (async () => {
+      const fetchSource = await axios.get(this.source).catch(() => null);
+      const data = fetchSource && fetchSource.data ? fetchSource.data : {};
+      this.cards = Object.values(data.messages).sort((a, b) => a.time - b.time);
+      this.tweets = Object.values(data.tweets).map((tweet) => String(tweet.id));
+      // this.$nextTick(() => {
+      //   twemoji.parse(document.body);
+      // });
+    })();
   },
   components: {
     'inner-image-zoom': InnerImageZoom,
@@ -282,10 +291,10 @@ export default {
       .card {
         background:#FFFFFF;
         position:relative;
-        padding-left:15px;
+        padding-left:20px;
         min-height:100px;
-        margin-bottom:10px;
-        border:1px solid #858ED1;
+        margin-bottom:25px;
+        border:2px solid #858ED1;
         .binder {
           background:#858ED1;
           position:absolute;
@@ -311,8 +320,8 @@ export default {
 }
 
 .card {
-  width:24%;
-  margin:5px 0.5%;
+  width:32%;
+  margin:10px 0.5%;
 }
 
 @media only screen and (max-width: 1264px) {

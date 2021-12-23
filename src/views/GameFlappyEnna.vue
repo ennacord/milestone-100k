@@ -9,7 +9,7 @@
       <iframe
         src="https://itch.io/embed-upload/4978587?color=858ED1"
         allowfullscreen=""
-        width="100%" height="750"
+        width="100%" height="660"
         frameborder="0">
           <a href="https://wikidude.itch.io/birb2">Play Flight of this Songbird on itch.io</a>
       </iframe>

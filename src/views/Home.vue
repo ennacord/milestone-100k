@@ -49,7 +49,7 @@
       </v-row>
 
       <!-- NOTICES -->
-      <v-row no-gutters class="cards px-16 mb-4">
+      <!-- <v-row no-gutters class="cards px-16 mb-4">
         <v-col class="text-center">
           <v-alert border="bottom" color="pink darken-1" class="text-h6 px-16" dark>
             <p>
@@ -71,7 +71,7 @@
             </p>
           </v-alert>
         </v-col>
-      </v-row>
+      </v-row> -->
 
       <!-- MURAL -->
       <v-row no-gutters class="mb-2" id="mural">

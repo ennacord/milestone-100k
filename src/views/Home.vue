@@ -49,31 +49,6 @@
         </v-col>
       </v-row>
 
-      <!-- NOTICES -->
-      <!-- <v-row no-gutters class="cards px-16 mb-4">
-        <v-col class="text-center">
-          <v-alert border="bottom" color="pink darken-1" class="text-h6 px-16" dark>
-            <p>
-              It's not too late! You can still celebrate Enna's milestone with everyone!<br />
-              <a href="https://forms.gle/aVxT2r8NxZMBdmFr6" target="_blank"
-                class="text-h5 lime--text lighten-5 text-decoration-none">
-                Add a message
-              </a>
-              and
-              <a href="https://aggie.io/9uoq9qnmty" target="_blank"
-                class="text-h5 lime--text lighten-5 text-decoration-none">
-                Doodle on the Wall
-              </a>!
-            </p>
-            <p>
-              To those who are drawing her a fanart as congratulations on 100k,
-              please submit a message, then specify your twitter handle to get whitelisted.
-              You'll also need to add the hashtag #enna100k to be included in the gallery section.
-            </p>
-          </v-alert>
-        </v-col>
-      </v-row> -->
-
       <!-- MURAL -->
       <v-row no-gutters class="mb-2" id="mural">
         <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">

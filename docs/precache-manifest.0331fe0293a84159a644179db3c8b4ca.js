@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a56cda6fdb4d6992300",
+    "revision": "b259462ca786ae909ad2",
     "url": "/css/app.a328779c.css"
   },
   {
@@ -100,8 +100,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/logo.77ea4341.png"
   },
   {
-    "revision": "7263dbc05d71f08acc9ff78eccf4ee3d",
-    "url": "/img/mural.7263dbc0.jpg"
+    "revision": "4f63dd0c3bb0c1256048bca0c6d01179",
+    "url": "/img/mural.4f63dd0c.jpg"
   },
   {
     "revision": "dfd09707da285c406d2339c2c1f2fc2f",
@@ -116,12 +116,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/wing.c736222f.png"
   },
   {
-    "revision": "f728c79a9fcd37d6a048a22b2b913103",
+    "revision": "b57038f42873941007adf68289458c52",
     "url": "/index.html"
   },
   {
-    "revision": "0a56cda6fdb4d6992300",
-    "url": "/js/app.f9efdac1.js"
+    "revision": "b259462ca786ae909ad2",
+    "url": "/js/app.bd1a8326.js"
   },
   {
     "revision": "e97aaf4c119a701314ea",

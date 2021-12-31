@@ -10,17 +10,17 @@ module.exports = {
     // HTML Title used for OpenGraph linters (social media links)
     config.plugin('html').tap((args) => {
       // eslint-disable-next-line no-param-reassign
-      args[0].title = 'Enna Alouette 100k Subscribers Tribute';
+      args[0].title = 'Enna Alouette 100K Subscribers Tribute';
       // eslint-disable-next-line no-param-reassign
       args[0].meta = {
-        'og:title': 'Enna Alouette 100k Subscribers Tribute',
+        'og:title': 'Enna Alouette 100K Subscribers Tribute',
         'og:type': 'website',
-        'og:description': 'The community celebrates Enna Alouette reaching 100,000 YouTube subscribers.',
-        'og:image': 'https://100k.ennaalouette.com/enna100k.png',
+        'og:description': 'Aloupeeps celebrate Enna Alouette\'s 100,000 YouTube subscriber milestone',
+        'og:image': 'https://100k.ennaalouette.com/enna100ksite.png',
         'twitter:card': 'summary_large_image',
-        'twitter:title': 'Enna Alouette 100k Subscribers Tribute',
-        'twitter:description': 'The community celebrates Enna Alouette reaching 100,000 YouTube subscribers.',
-        'twitter:image': 'https://100k.ennaalouette.com/enna100k.png',
+        'twitter:title': 'Enna Alouette 100K Subscribers Tribute',
+        'twitter:description': 'Aloupeeps celebrate Enna Alouette\'s 100,000 YouTube subscriber milestone',
+        'twitter:image': 'https://100k.ennaalouette.com/enna100ksite.png',
       };
       return args;
     });

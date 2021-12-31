@@ -144,7 +144,7 @@
           </div>
           <div class="px-4">
             <iframe
-              width="100%" height="480"
+              width="100%" height="400"
               src="https://www.youtube.com/embed/gj4cVOgEGGM"
               frameborder="0"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
@@ -152,17 +152,20 @@
             </iframe>
           </div>
         </v-col>
-        <!-- <v-col cols="12" md="6">
+        <v-col cols="12" md="6">
           <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
-            Video Tribute
+            Christmas 2021 Video
           </div>
           <div class="px-4">
-            <v-img
-              :lazy-src="MuralImg"
-              :src="MuralImg"
-            ></v-img>
+            <iframe
+              width="100%" height="400"
+              src="https://www.youtube.com/embed/4u1W8iCCPkA"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>
-        </v-col> -->
+        </v-col>
       </v-row>
 
       <!-- ARTWORKS -->

@@ -158,17 +158,20 @@
             </div>
           </router-link>
         </v-col>
-        <!-- <v-col cols="12" md="6">
+        <v-col cols="12" md="6">
           <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
-            Enna Button
+            Hope in the Dark (Holiday Special) ver. 100K Aloupeeps ed.
           </div>
           <div class="px-4">
-            <v-img
-              :lazy-src="MuralImg"
-              :src="MuralImg"
-            ></v-img>
+            <iframe
+              width="100%" height="480"
+              src="https://www.youtube.com/embed/gj4cVOgEGGM"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>
-        </v-col> -->
+        </v-col>
         <!-- <v-col cols="12" md="6">
           <div class="text-h6 text-center deep-purple lighten-2 white--text rounded-xl mb-2">
             Video Tribute

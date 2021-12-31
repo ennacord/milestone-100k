@@ -27,7 +27,7 @@ module.exports = {
   },
   pwa: {
     name: 'enna100k',
-    assetsVersion: '2021_12_31_11_46',
+    assetsVersion: '2021_12_31_12_11',
     workboxOptions: {
       exclude: [
         'CNAME',

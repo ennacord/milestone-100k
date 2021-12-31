@@ -198,7 +198,10 @@
           <h3 class="purple--text">Project</h3>
           <ul>
             <li><strong>jetrico</strong> - Website, Message Admin, Drawing Admin</li>
-            <li><strong>Domodrak</strong> - Project Management, Message Admin, Drawing Admin</li>
+            <li>
+              <strong>Domo Espresso</strong>
+              - Project Management, Message Admin, Drawing Admin
+            </li>
             <li><strong>wikidude</strong> - Message Admin, Drawing Admin</li>
             <li><strong>NegativeRainbow</strong> - Domain Name</li>
             <li><strong>MiikeMQ</strong> - Discord Server Admin</li>
@@ -212,14 +215,15 @@
             <li><strong>wikidude</strong> - Flappy Game</li>
             <li><strong>jetrico</strong> - Choir Game Programming</li>
             <li><strong>Deemo Harlos</strong> - Choir Game Audio</li>
-            <li><strong>Domodrak</strong> - Holiday Special Video</li>
+            <li><strong>Domo Espresso</strong> - Holiday Special Video</li>
           </ul>
         </v-col>
         <v-col cols="12" lg="4">
           <h3 class="purple--text">Drawing Board</h3>
-          jetrico, Domodrak, ERF, OrangeHenge, latte, Apple, verm, razecaida,
+          jetrico, Domo Espresso, ERF, OrangeHenge, latte, Apple, verm, razecaida,
           Chronia, wikidude, Renju, Airi Granny, TheYeetiest, AllSoonNoDairy,
-          nobu_okt, Smiley, Riacu, Ishidaru, wildestduck, Frank04, Altina, 碧
+          nobu_okt, Smiley, Riacu, Ishidaru, wildestduck, Frank04, Altina, 碧,
+          Yui-chan, Shie, Ryuji, Coro-chan,
           and other Anonymous Aloupeeps!
         </v-col>
       </v-row>

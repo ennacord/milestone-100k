@@ -77,7 +77,7 @@
       <!-- MURAL -->
       <v-row no-gutters class="mb-2" id="mural">
         <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-          WALL OF THE SONGBIRD
+          WALL FOR THE SONGBIRD
           <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
             TOP
           </v-btn>
@@ -85,6 +85,9 @@
       </v-row>
       <v-row no-gutters class="mb-8">
         <v-col class="mural" sm="10" offset-sm="1">
+          <h2 class="text-center mb-4 purple--text darken-2">
+            Aloupeeps worked together to draw their 100K congratulations on a single board!
+          </h2>
           <div class="mural-container mx-auto">
             <inner-image-zoom
               :src="MuralImg"
@@ -94,7 +97,7 @@
       </v-row>
 
       <!-- MESSAGES -->
-      <v-row no-gutters class="mt-8 mb-8" id="messages">
+      <v-row no-gutters class="mt-8 mb-4" id="messages">
         <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
           MESSAGES FOR THE SONGBIRD
           <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
@@ -104,6 +107,9 @@
       </v-row>
       <v-row no-gutters>
         <v-col class="cards px-4">
+          <h2 class="text-center mb-8 purple--text darken-2">
+            Aloupeeps from all over the world celebrate Enna's success!
+          </h2>
           <div v-masonry transition-duration="0.3s" item-selector=".card">
             <div v-masonry-tile class="card" v-for="(item, ix) in cards" :key="`card-${ix}`">
               <div class="binder"></div>
@@ -118,7 +124,7 @@
       <!-- GAMES -->
       <v-row no-gutters class="mt-8 mb-4" id="games">
         <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
-          GAMES and OTHER CONTENT
+          GAMES and VIDEOS
           <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
             TOP
           </v-btn>

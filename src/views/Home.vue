@@ -226,6 +226,7 @@
 import axios from 'axios';
 import InnerImageZoom from 'vue-inner-image-zoom';
 import { Tweet } from 'vue-tweet-embed';
+import twemoji from 'twemoji';
 import MuralImg from '../assets/mural.jpg';
 import ThumbFlappy from '../assets/thumb-flappy.png';
 import ThumbChoir from '../assets/thumb-choir.png';
@@ -255,9 +256,9 @@ export default {
       const data = fetchSource && fetchSource.data ? fetchSource.data : {};
       this.cards = Object.values(data.messages).sort((a, b) => a.time - b.time);
       this.tweets = Object.values(data.tweets).map((tweet) => String(tweet.id));
-      // this.$nextTick(() => {
-      //   twemoji.parse(document.body);
-      // });
+      this.$nextTick(() => {
+        twemoji.parse(document.body);
+      });
     })();
   },
   components: {
@@ -350,6 +351,14 @@ export default {
   .card {
     width:96%;
     margin:10px 2%;
+  }
+}
+</style>
+
+<style lang="scss">
+.card-text {
+  img {
+    height:1.4rem;
   }
 }
 </style>

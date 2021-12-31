@@ -41,7 +41,8 @@
             <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
             <span class="pl-4 text-h6">Games</span>
           </v-btn>
-          <v-btn text class="purple--text darken-3" @click="scrollTo('#artworks')">
+          <v-btn text class="purple--text darken-3" @click="scrollTo('#artworks')"
+            v-if="tweets.length">
             <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
             <span class="pl-4 text-h6">Artworks</span>
           </v-btn>
@@ -176,7 +177,7 @@
       </v-row>
 
       <!-- ARTWORKS -->
-      <v-row no-gutters class="mt-8 mb-8" id="artworks">
+      <v-row no-gutters class="mt-8 mb-8" id="artworks" v-if="tweets.length">
         <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
           ARTWORKS
           <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
@@ -184,7 +185,7 @@
           </v-btn>
         </v-col>
       </v-row>
-      <v-row class="px-8">
+      <v-row class="px-8" v-if="tweets.length">
         <v-col
           cols="12" sm="6" lg="4" xl="3"
           v-for="(item, ix) in tweets" :key="`tweet-${ix}`">

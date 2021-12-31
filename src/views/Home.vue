@@ -205,7 +205,7 @@
       </v-row>
 
       <!-- CREDITS -->
-      <!-- <v-row no-gutters class="mt-8 mb-8" id="games">
+      <v-row no-gutters class="mt-16 mb-4">
         <v-col class="text-h6 text-center px-2 deep-purple lighten-4 mx-8 rounded-xl">
           CREDITS
           <v-btn text class="float-right purple--text darken-3" @click="scrollTo('#header')">
@@ -213,11 +213,36 @@
           </v-btn>
         </v-col>
       </v-row>
-      <v-row no-gutters class="mb-8">
-        <v-col class="cards px-16">
-          credits
+      <v-row no-gutters class="px-16 mb-16">
+        <v-col cols="12" lg="4">
+          <h3 class="purple--text">Project</h3>
+          <ul>
+            <li><strong>jetrico</strong> - Website, Message Admin, Drawing Admin</li>
+            <li><strong>Domodrak</strong> - Project Management, Message Admin, Drawing Admin</li>
+            <li><strong>wikidude</strong> - Message Admin, Drawing Admin</li>
+            <li><strong>NegativeRainbow</strong> - Domain Name</li>
+            <li><strong>MiikeMQ</strong> - Discord Server Admin</li>
+          </ul>
         </v-col>
-      </v-row> -->
+        <v-col cols="12" lg="4">
+          <h3 class="purple--text">Artists and Creatives</h3>
+          <ul>
+            <li><strong>mattvent</strong> - Header Artwork, Choir Game Art</li>
+            <li><strong>Elodie</strong> - Feature Art Piece</li>
+            <li><strong>wikidude</strong> - Flappy Game</li>
+            <li><strong>jetrico</strong> - Choir Game Programming</li>
+            <li><strong>Deemo Harlos</strong> - Choir Game Audio</li>
+            <li><strong>Domodrak</strong> - Holiday Special Video</li>
+          </ul>
+        </v-col>
+        <v-col cols="12" lg="4">
+          <h3 class="purple--text">Drawing Board</h3>
+          jetrico, Domodrak, ERF, OrangeHenge, latte, Apple, verm, razecaida,
+          Chronia, wikidude, Renju, Airi Granny, TheYeetiest, AllSoonNoDairy,
+          nobu_okt, Smiley, Riacu, Ishidaru, wildestduck, Frank04, Altina, 碧
+          and other Anonymous Aloupeeps!
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>

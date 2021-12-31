@@ -86,7 +86,12 @@
             Aloupeeps from all over the world celebrate Enna's success!
           </h2>
           <div v-masonry transition-duration="0.3s" item-selector=".card">
-            <div v-masonry-tile class="card" v-for="(item, ix) in cards" :key="`card-${ix}`">
+            <div
+              v-masonry-tile
+              :class="[ 'card', read[item.name] ? 'card-read' : '' ]"
+              v-for="(item, ix) in cards" :key="`card-${ix}`"
+              @click="toggleRead(item.name)"
+            >
               <div class="binder"></div>
               <div class="wings"><img src="../assets/wing.png" /></div>
               <div class="card-name text-h6 pr-12 py-2">{{item.name}}</div>
@@ -239,6 +244,7 @@ export default {
     MuralImg,
     ThumbFlappy,
     ThumbChoir,
+    read: {},
   }),
   methods: {
     scrollTo(target) {
@@ -248,13 +254,22 @@ export default {
         easing: 'easeInOutCubic',
       });
     },
+    toggleRead(key) {
+      if (typeof this.read[key] === 'undefined') this.read[key] = false;
+      this.read = { ...this.read, [key]: !this.read[key] };
+      localStorage.setItem('read', JSON.stringify(this.read));
+    },
   },
   mounted() {
     // Load data
     (async () => {
+      if (!localStorage.getItem('read')) localStorage.setItem('read', '{}');
+      this.read = JSON.parse(localStorage.getItem('read'));
       const fetchSource = await axios.get(this.source).catch(() => null);
       const data = fetchSource && fetchSource.data ? fetchSource.data : {};
-      this.cards = Object.values(data.messages).sort((a, b) => a.time - b.time);
+      this.cards = Object.values(data.messages)
+        .sort((a, b) => a.time - b.time);
+      // .map((v) => ({ ...v, read: this.read(v.name) }));
       this.tweets = Object.values(data.tweets).map((tweet) => String(tweet.id));
       this.$nextTick(() => {
         twemoji.parse(document.body);
@@ -324,6 +339,13 @@ export default {
         }
         .card-name {
           color:#343c75;
+        }
+        &.card-read {
+          background:#343c75;
+          color:#ffffff;
+          .card-name {
+            color:#ffffff;
+          }
         }
       }
     }

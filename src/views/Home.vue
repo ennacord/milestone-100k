@@ -340,6 +340,9 @@ export default {
         .card-name {
           color:#343c75;
         }
+        .card-text {
+          white-space: pre-line;
+        }
         &.card-read {
           background:#343c75;
           color:#ffffff;

@@ -197,6 +197,38 @@
         </v-col>
       </v-row>
       <v-row no-gutters class="px-16 mb-16">
+        <v-col cols="12" class="mb-4">
+          <p>
+            We've at times done message boards like this before, to congratulate the one we support.
+            However, Enna is the one we never want to miss.
+            So I pitched this website idea to the other Aloupeeps,
+            and this time we've decided to step it up, as Enna Alouette deserves.
+            More than just a list of messages, we've added a collaborative drawing,
+            two games, and a video to celebrate the occasion.
+          </p>
+          <p>
+            I'm so proud to be with this community! Even off-stream, outside Enna's eyes,
+            they're sincere and really do love her and want to support her.
+            They really did step it up a notch! Even though they just gave her a Christmas present,
+            their desire to give back to Enna is unfazed.
+            And that's not even the end of it, prepare for more love to come! ;P
+          </p>
+          <p>
+            Huge kudos to the people below, those who sent a message, who drew on the wall,
+            artists still tweeting new fan arts, those in Ennacord,
+            or even other Aloupeeps who love her just as much, for making this project come true!
+            Each one of you make up the 100,000 Aloupeeps who celebrate with us!
+          </p>
+          <p>
+            With this much people, we're not only able to act as wings,
+            but serve as the wind that will journey with her in this fun ride!
+            Enna, take us whereever you want!
+            Looking forward to all the fun we'll have on the years ahead!
+          </p>
+          <p>
+            Sorry for the wall of text - jetrico
+          </p>
+        </v-col>
         <v-col cols="12" lg="4">
           <h3 class="purple--text">Project</h3>
           <ul>

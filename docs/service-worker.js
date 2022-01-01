@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.cef9d9b6c1c02f550ea8b61a65be3a5e.js"
+  "/precache-manifest.64ee9228e2fef39837471b3768e6d42b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "tribute-enna100k"});

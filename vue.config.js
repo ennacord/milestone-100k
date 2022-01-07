@@ -29,6 +29,7 @@ module.exports = {
     name: 'enna100k',
     assetsVersion: '2021_12_31_19_42',
     workboxOptions: {
+      skipWaiting: true,
       exclude: [
         'CNAME',
         /(.*).css.map/g,

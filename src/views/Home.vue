@@ -218,25 +218,28 @@
             or even other Aloupeeps who love her just as much, for making this project come true!
             Each one of you make up the 100,000 Aloupeeps who celebrate with us!
           </p>
+          <p class="font-weight-bold">
+            Ultimately, we'd like to thank Enna Alouette for bringing us together.
+            You stand at the center of our love, and please don't be afraid to accept them.
+            Don't underestimate yourself, we didn't just happen to be here,
+            we gathered here because of you.
+          </p>
           <p>
-            With this much people, we're not only able to act as wings,
+            With this many people, we're not only able to act as wings,
             but serve as the wind that will journey with her in this fun ride!
             Enna, take us whereever you want!
             Looking forward to all the fun we'll have on the years ahead!
-          </p>
-          <p>
-            Sorry for the wall of text - jetrico
           </p>
         </v-col>
         <v-col cols="12" lg="4">
           <h3 class="purple--text">Project</h3>
           <ul>
-            <li><strong>jetrico</strong> - Website, Message Admin, Drawing Admin</li>
+            <li><strong>jetrico</strong> - Website, Message &amp; Drawing Admin</li>
             <li>
               <strong>Domo Espresso</strong>
-              - Project Management, Message Admin, Drawing Admin
+              - Project Management, Message &amp; Drawing Admin
             </li>
-            <li><strong>wikidude</strong> - Message Admin, Drawing Admin</li>
+            <li><strong>wikidude</strong> - Message &amp; Drawing Admin</li>
             <li><strong>NegativeRainbow</strong> - Domain Name</li>
             <li><strong>MiikeMQ</strong> - Discord Server Admin</li>
           </ul>
@@ -249,7 +252,7 @@
             <li><strong>wikidude</strong> - Flappy Game</li>
             <li><strong>jetrico</strong> - Choir Game Programming</li>
             <li><strong>Deemo Harlos</strong> - Choir Game Audio</li>
-            <li><strong>Domo Espresso</strong> - Holiday Special Video</li>
+            <li><strong>Domo Espresso</strong> - Holiday Special Video, Christmas Video</li>
           </ul>
         </v-col>
         <v-col cols="12" lg="4">

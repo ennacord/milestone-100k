@@ -41,8 +41,7 @@
             <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
             <span class="pl-4 text-h6">Games</span>
           </v-btn>
-          <v-btn text class="purple--text darken-3" @click="scrollTo('#artworks')"
-            v-if="tweets.length">
+          <v-btn text class="purple--text darken-3" @click="scrollTo('#artworks')">
             <v-avatar left size="40"><img src="../assets/gem.png" class="navimg"></v-avatar>
             <span class="pl-4 text-h6">Artworks</span>
           </v-btn>
